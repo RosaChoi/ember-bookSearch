@@ -7,11 +7,38 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <script type="text/x-handlebars">
+      <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Rosa's Library</a>
+          </div>
+          <ul class="nav navbar-nav list-unstyled">
+            <!-- <li id="aboutLink">{{#link-to 'about'}}Books{{/link-to}}</li>
+            <li id="photoLink">{{#link-to 'photos'}}photos{{/link-to}}</li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        {{outlet}}
+      </div>
+    </script>
+    <!-- INDEX -->
+    <script type="text/x-handlebars" id="index">
+      <div id="welcome">
+        <h1>Thank you for visiting Rosa's Library.</h1>
+        <button id="viewAuthors" type="button" class="btn btn-default btn-lg">View Autors</button>
+      </div>
+    </script>
+    <!-- AUTHORS -->
 
+    <!-- JS library -->
     <script src="js/libs/jquery-1.10.2.js"></script>
     <script src="js/libs/handlebars-v3.0.0.js"></script>
     <script src="js/libs/ember-template-compiler-1.10.0.js"></script>
     <script src="js/libs/ember-1.10.0.debug.js"></script>
     <script src="js/libs/ember-data.js"></script>
+    <!-- my JS files -->
+    <script src="js/app.js"></script>
   </body>
 </html>
