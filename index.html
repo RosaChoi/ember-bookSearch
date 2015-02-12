@@ -13,10 +13,6 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Rosa's Library</a>
           </div>
-          <ul class="nav navbar-nav list-unstyled">
-            <!-- <li id="aboutLink">{{#link-to 'about'}}Books{{/link-to}}</li>
-            <li id="photoLink">{{#link-to 'photos'}}photos{{/link-to}}</li> -->
-          </ul>
         </div>
       </div>
       <div class="container">
@@ -27,10 +23,39 @@
     <script type="text/x-handlebars" id="index">
       <div id="welcome">
         <h1>Thank you for visiting Rosa's Library.</h1>
-        <button id="viewAuthors" type="button" class="btn btn-default btn-lg">View Autors</button>
+        <div class="row">
+          <div class="col-sm-3">
+            <button id="viewAuthors" type="button" class="btn btn-default btn-block col-sm-3">
+              {{#link-to 'authors'}}View Authors{{/link-to}}
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="viewBooks" type="button" class="btn btn-default btn-block col-sm-3">View Books</button>
+          </div>
+
+        </div>
       </div>
     </script>
     <!-- AUTHORS -->
+    <script type="text/x-handlebars" id="authors">
+      <div id="authorsCollection">
+        <div class="row">
+          {{log model}}
+          {{#each author in model}}
+          <div id="authorProfile" class="col-sm-2">
+            <div class="wrap">
+              <img id="authorPic" {{bind-attr src=author.image}} alt="author's profile photo">
+              <div class="caption">
+                <h4>{{author.name}}</h4>
+                <!-- <p>{{author.bio}}</p> -->
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+
 
     <!-- JS library -->
     <script src="js/libs/jquery-1.10.2.js"></script>
@@ -40,5 +65,9 @@
     <script src="js/libs/ember-data.js"></script>
     <!-- my JS files -->
     <script src="js/app.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/routes/authors.js"></script>
+    <script src="js/models/author.js"></script>
+
   </body>
 </html>

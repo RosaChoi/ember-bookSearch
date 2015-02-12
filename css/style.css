@@ -6,3 +6,35 @@ db8662*/
 .navbar.navbar-inverse {
   border-radius: 0;
 }
+
+.row {
+  margin-top: 3em;
+}
+
+.btn {
+  font-size: 18px;
+  color: #de6734;
+}
+
+#viewAuthors {
+  border: 1px solid #ede4df;
+}
+
+#viewAuthors:hover {
+  background: #ede4df;
+  color: #de6734;;
+}
+
+#viewBooks {
+  border: 1px solid #dcd4d0;
+}
+
+#viewBooks:hover {
+  background: #dcd4d0;
+  color: #de6734;
+}
+
+#authorPic {
+  width: 150px;
+  height: 150px;
+}

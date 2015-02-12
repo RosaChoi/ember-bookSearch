@@ -1,1 +1,3 @@
-window.Books = Ember.Application.create();
+window.Library = Ember.Application.create();
+
+Library.ApplicationAdapter = DS.FixtureAdapter;
