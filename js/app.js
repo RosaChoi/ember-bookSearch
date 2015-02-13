@@ -1,3 +1,3 @@
 window.Library = Ember.Application.create();
 
-Library.ApplicationAdapter = DS.FixtureAdapter;
+Library.ApplicationAdapter = DS.FixtureAdapter.extend();

@@ -3,38 +3,49 @@
 dcd4d0
 db8662*/
 
-.navbar.navbar-inverse {
+body {
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+}
+
+.navbar-header a.navbar-brand,
+#booksLink a,
+#authorsLink a {
+  color: #de6734;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#booksLink a,
+#authorsLink a {
+  font-weight: lighter;
+}
+
+#booksLink a:hover,
+#authorsLink a:hover {
+  text-decoration: none;
+  color: #de9135;
+}
+
+#topNavbar {
+  background: rgba(0,0,0,0.2);
+  border: 0px;
+  border-bottom: 1px solid #de6734;
+  box-shadow:  0px 10px 15px rgba(0, 0, 0, 0.2);
   border-radius: 0;
 }
 
-.row {
+#links {
   margin-top: 3em;
+  font-size: 1.5em;
 }
 
-.btn {
-  font-size: 18px;
-  color: #de6734;
+#bookList {
+  background: rgba(255,255,255,0.6);
+  margin-right: 10px;
 }
 
-#viewAuthors {
-  border: 1px solid #ede4df;
-}
-
-#viewAuthors:hover {
-  background: #ede4df;
-  color: #de6734;;
-}
-
-#viewBooks {
-  border: 1px solid #dcd4d0;
-}
-
-#viewBooks:hover {
-  background: #dcd4d0;
-  color: #de6734;
-}
-
-#authorPic {
-  width: 150px;
-  height: 150px;
+#bookCover {
+  max-width: 70%;
+  margin-bottom: 20px;
 }
